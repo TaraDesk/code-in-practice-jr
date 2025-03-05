@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="app/styles.css">
+</head>
+<body>
+  <main>
+    <form action="" id="contact-form" class="flex flex-col" novalidate>
+      <div class="alert-box flex flex-col hidden">
+        <div class="alert-header flex flex-ai-c">
+          <img src="images/icon-success-check.svg" alt="">
+          <p>Message Sent!</p>
+        </div>
+        <p class="alert-message">Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+
+      <h1 class="title">Contact Us</h1>
+
+      <div class="name-group flex">
+        <div class="form-group flex flex-col">
+          <label for="">First Name *</label>
+          <input type="text" class="text-input">
+          <p class="error-message hidden">This field is required</p>
+        </div>
+
+        <div class="form-group flex flex-col">
+          <label for="">Last Name *</label>
+          <input type="text" class="text-input">
+          <p class="error-message hidden">This field is required</p>
+        </div>
+      </div>
+
+      <div class="form-group flex flex-col">
+        <label for="">Email Address *</label>
+        <input type="email" class="text-input">
+        <p class="error-message hidden">This field is required</p>
+      </div>
+
+      <div class="form-group flex flex-col ">
+        <label for="">Query Type *</label>
+        <div class="radio-group flex">
+          <div class="radio-option">
+            <input type="radio" id="general" name="query-type">
+            <label for="general" class="flex flex-ai-c">General Enquiry</label>
+          </div>
+
+          <div class="radio-option">
+            <input type="radio" id="support" name="query-type">
+            <label for="support" class="flex flex-ai-c">Support Request</label>
+          </div>
+        </div>
+        <p class="error-message hidden">Please select a query type</p>
+      </div>
+
+      <div class="form-group flex flex-col">
+        <label for="">Message *</label>
+        <textarea class="message-input"></textarea>
+        <p class="error-message hidden">This field is required</p>
+      </div>
+
+      <div class="form-group flex flex-col">
+        <div class="checkbox-option flex flex-ai-c">
+          <input type="checkbox" id="consent">
+          <label for="consent">I consent to being contacted by the team *</label>
+        </div>
+        <p class="error-message hidden">To submit this form, please consent to being contacted</p>
+      </div>
+
+      <button type="submit" class="btn">Submit</button>
+    </form>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/TaraDesk">Perahim Tara</a>.
+    </div>
+  </main>
+
+  <script src="app/js/script.js"></script>
+</body>
+</html>

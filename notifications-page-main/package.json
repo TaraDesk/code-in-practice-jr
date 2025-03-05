@@ -1,0 +1,16 @@
+{
+  "name": "notifications-page-main",
+  "version": "1.0.0",
+  "description": "This is a solution to the [Notifications page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/notifications-page-DqK5QAmKbC). Frontend Mentor challenges help you improve your coding skills by building realistic projects.",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass app/scss/styles.scss app/styles.css",
+    "watch:css": "sass --watch app/scss:app/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}

@@ -1,0 +1,145 @@
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Inter, sans-serif;
+	font-size: vars.$font-xs;
+	line-height: 1.5;
+	background-color: vars.$offWhite;
+	color: vars.$darkGrayishBlue;
+}
+
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+
+main {
+	position: relative;
+	width: 100vw;
+	padding: 1.75rem 0.75rem;
+
+	@media (min-width: 1200px) {
+		padding: 5.375rem 7.875rem;
+	}
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+// Styles
+.navbar-logo {
+	width: 3.125rem;
+	height: 1.875rem;
+}
+
+// Utils Class
+.divider {
+	width: 100%;
+	height: 0.063rem;
+	background-color: hsl(236, 13%, 50%);
+}
+
+.title {
+	font-size: vars.$font-xl;
+	font-weight: vars.$font-extraBold;
+	line-height: 1.0;
+	color: vars.$veryDarkBlue;
+
+	@media (min-width: 1200px) {
+		font-size: vars.$font-title;
+	}
+
+	&-two {
+		font-size: vars.$font-md;
+		color: vars.$offWhite;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			color: vars.$softRed;
+		}
+	}
+
+	&-three {
+		font-size: vars.$font-sm;
+		color: vars.$veryDarkBlue;
+		transition: all 0.3s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			color: vars.$softRed;
+		}
+	}
+
+	&-rank {
+		font-size: vars.$font-lg;
+		font-weight: vars.$font-extraBold;
+		color: vars.$softRed;
+	}
+
+	&-header {
+		font-size: vars.$font-lg;
+		font-weight: vars.$font-extraBold;
+
+		@media (min-width: 1200px) {
+			font-size: vars.$font-xl;
+		}
+	}
+}
+
+.desc {
+	line-height: 1.7;
+}
+
+.flex {
+	display: flex;
+
+	&-col {
+		flex-direction: column;
+	}
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+.wrapper {
+	gap: 0.5rem;
+}
+
+.button {
+	display: inline-block;
+	padding: 0.75rem 2rem;
+	font-weight: bold;
+	letter-spacing: 25%;
+	text-transform: uppercase;
+	background-color: vars.$softRed;
+	color: vars.$veryDarkBlue;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: vars.$offWhite;
+		background-color: vars.$veryDarkBlue;
+	}
+}
+
+.hidden {
+	display: none;
+}

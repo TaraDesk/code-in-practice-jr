@@ -1,0 +1,130 @@
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Karla, sans-serif;
+	font-size: vars.$font-sm;
+	line-height: 1.5;
+	background-color: vars.$green-200;
+	color: vars.$grey-900;
+}
+
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+
+main {
+	width: 100vw;
+	margin: 4rem auto;
+
+	@media (min-width: 780px) {
+		margin: 6rem auto;
+	}
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+}
+
+// Utils Class
+.flex {
+	display: flex;
+
+	&-col {
+		flex-direction: column;
+	}
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.title {
+	font-size: vars.$font-lg;
+	letter-spacing: -2%;
+}
+
+.btn {
+	padding: 1rem;
+	border: none;
+	border-radius: 0.5rem;
+	font-family: Karla, sans-serif;
+	font-weight: bold;
+	font-size: vars.$font-md;
+	background-color: vars.$green-600;
+	color: vars.$white;
+	cursor: pointer;
+	transition: all ease-in-out 300ms;
+
+	&:hover {
+		background-color: hsl(169, 82%, 14%);
+	}
+}
+
+.text-input {
+	padding: 1.125rem;
+	border: 0.063rem solid vars.$grey-500;
+	border-radius: 0.5rem;
+	font-family: Karla, sans-serif;
+	font-size: vars.$font-md;
+	line-height: 1.0;
+	color: vars.$grey-900;
+	transition: all ease-in-out 300ms;
+
+	&:hover {
+		border-color: vars.$grey-900;
+	}
+
+	@media (min-width: 780px) {
+		padding: 1.125rem 1.5rem;
+	}
+}
+
+.message-input {
+	height: 15rem;
+	padding: 1.125rem;
+	border: 0.063rem solid vars.$grey-500;
+	border-radius: 0.5rem;
+	font-family: Karla, sans-serif;
+	font-size: vars.$font-md;
+	color: vars.$grey-900;
+	resize: none;
+
+	@media (min-width: 780px) {
+		height: 6.563rem;
+		padding: 0.875rem 1.5rem;
+	}
+}
+
+.form-group {
+	width: 100%;
+	gap: 0.5rem;
+
+	&:has(.radio-group) {
+		gap: 1rem;
+	}
+
+	&:has(.checkbox-option) {
+		padding: 0.75rem 0.25rem;
+	}
+}
+
+.error-message {
+	color: vars.$red;
+}

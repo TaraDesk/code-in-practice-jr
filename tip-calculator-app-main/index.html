@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="app/styles.css">
+</head>
+<body>
+  <main>
+    <header class="header">
+      <img class="header__logo" src="images/logo.svg" alt="Logo">
+    </header>
+
+    <section class="container" id="tip-calc">
+      <section class="calc flex flex-col">
+        <div class="bill flex flex-col">
+          <h4 class="bill__label">Bill</h4>
+          <div class="wrapper">
+            <input class="bill__input" type="number" placeholder="0">
+          </div>
+        </div>
+
+        <div class="tips flex flex-col">
+          <h4 class="tips__label">Select Tip %</h4>
+
+          <div class="tips__buttons flex flex-ai-c">
+            <div class="tips__button" role="radio">
+              <input class="tips__button-radio" type="radio" name="tip" value="5"/>
+              <span class="tips__button-label flex flex-ai-c flex-jc-c">5%</span>
+            </div>
+
+            <div class="tips__button" role="radio">
+              <input class="tips__button-radio" type="radio" name="tip" value="10"/>
+              <span class="tips__button-label flex flex-ai-c flex-jc-c">10%</span>
+            </div>
+
+            <div class="tips__button" role="radio">
+              <input class="tips__button-radio" type="radio" name="tip" value="15"/>
+              <span class="tips__button-label flex flex-ai-c flex-jc-c">15%</span>
+            </div>
+
+            <div class="tips__button" role="radio">
+              <input class="tips__button-radio" type="radio" name="tip" value="25"/>
+              <span class="tips__button-label flex flex-ai-c flex-jc-c">25%</span>
+            </div>
+
+            <div class="tips__button" role="radio">
+              <input class="tips__button-radio" type="radio" name="tip" value="50"/>
+              <span class="tips__button-label flex flex-ai-c flex-jc-c">50%</span>
+            </div>
+
+            <div class="tips__custom">
+              <input type="number" class="tips__custom-input" name="custom_tip" placeholder="Custom">
+            </div>
+          </div>
+        </div>
+
+        <div class="peoples flex flex-col">
+          <div class="container flex flex-jc-sb flex-ai-c">
+            <h4 class="peoples__label">Number of People</h4>
+            <p class="error-message">Can't be zero</p>
+          </div>
+          <div class="wrapper">
+            <input class="peoples__input" type="number" placeholder="0">
+          </div>
+        </div>
+      </section>
+
+      <section class="result flex flex-col">
+        <div class="result-container flex flex-col">
+          <div class="amount flex flex-jc-sb flex-ai-c">
+            <h4 class="amount__label">Tip Amount <span>/ person</span></h4>
+            <h2 class="amount__value">$0.00</h2>
+          </div>
+
+          <div class="total flex flex-jc-sb flex-ai-c">
+            <h4 class="total__label">Total <span>/ person</span></h4>
+            <h2 class="total__value">$0.00</h2>
+          </div>
+        </div>
+
+        <button class="reset" disabled>
+          Reset
+        </button>
+      </section>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/TaraDesk">Perahim Tara</a>.
+    </div>
+  </main>
+
+  <script src="app/js/tips-calc.js"></script>
+  <script src="app/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Space Mono, sans-serif;
+	font-weight: bold;
+	line-height: 1.0;
+	background-color: vars.$lightGrayishCyan;
+}
+
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+main {
+	width: 100vw;
+
+	@include vars.breakpoint-up(large) {
+		height: 100vh;
+	}
+}
+
+h1, h2, h3, h4 {
+	margin: 0;
+}
+
+h2 {
+	font-size: vars.$font-lg;
+	color: vars.$strongCyan;
+
+	@include vars.breakpoint-up(large) {
+		font-size: vars.$font-xl;
+	}
+}
+
+h4 {
+	font-size: vars.$font-sm;
+	color: vars.$darkGrayishCyan;
+}
+
+// Utils Class
+.flex {
+	display: flex;
+
+	&-col {
+		flex-direction: column;
+	}
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+.wrapper {
+	position: relative;
+}
+
+
+// Input Number
+.bill__input,
+.peoples__input {
+	width: 100%;
+	padding: 0.625rem 1.125rem;
+	border: 0.125rem solid vars.$grayishCyan;
+	border-radius: vars.$rad-input;
+	font-family: Space Mono, sans-serif;
+	font-weight: bold;
+	font-size: vars.$font-md;
+	text-align: right;
+	background-color: vars.$lightGrayishCyan;
+	color: vars.$veryDarkCyan;
+}
+
+.bill__input::placeholder,
+.peoples__input::placeholder {
+	color: vars.$grayishCyan;
+}
+
+// Tips Ratio
+.tips__button {
+	position: relative;
+	display: inline-block;
+
+	&-radio {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		z-index: 1;
+		cursor: pointer;
+	}
+
+	&-label {
+		width: 9.219rem;
+		height: 3rem;
+		border-radius: 0.5rem;
+		font-size: vars.$font-md;
+		font-weight: bold;
+		background-color: vars.$veryDarkCyan;
+		color: vars.$white;
+		transition: all 0.3s ease-in-out;
+		user-select: none;
+
+		@include vars.breakpoint-up(large) {
+			width: 100%;
+			width: 7.281rem;
+		}
+	}
+
+	&:hover .tips__button-label {
+		background-color: hsl(173, 61%, 77%);
+		color: vars.$veryDarkCyan;
+	}
+
+	&-radio:checked + .tips__button-label {
+		background-color: vars.$strongCyan;
+		color: vars.$veryDarkCyan;
+	}
+}

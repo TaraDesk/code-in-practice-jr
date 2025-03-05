@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | News homepage</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="app/styles.css">
+</head>
+<body>
+  <main>
+    <div class="sidebar hidden">
+      <div class="overlay"></div>
+      <div class="sidebar-menu flex flex-col">
+        <button class="close-btn">
+          <img src="./images/icon-menu-close.svg" alt="Close Button">
+        </button>
+
+        <ul class="header-links flex flex-col">
+          <li class="link-item"><a href="" class="link">Home</a></li>
+          <li class="link-item"><a href="" class="link">New</a></li>
+          <li class="link-item"><a href="" class="link">Popular</a></li>
+          <li class="link-item"><a href="" class="link">Trending</a></li>
+          <li class="link-item"><a href="" class="link">Categories</a></li>
+        </ul>
+      </div>
+    </div> 
+
+    <div id="news-homepage">
+      <header class="header">
+        <nav class="navbar flex flex-ai-c flex-jc-sb">
+          <img src="./images/logo.svg" alt="Site Logo" class="navbar-logo">
+
+          <button class="hamburger-menu">
+            <img src="./images/icon-menu.svg" alt="Hamburger Menu">
+          </button>
+
+          <ul class="navbar-menu">
+            <li class="menu-item"><a href="" class="menu-link">Home</a></li>
+            <li class="menu-item"><a href="" class="menu-link">New</a></li>
+            <li class="menu-item"><a href="" class="menu-link">Popular</a></li>
+            <li class="menu-item"><a href="" class="menu-link">Trending</a></li>
+            <li class="menu-item"><a href="" class="menu-link">Categories</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section class="recommended-news">
+        <div class="group-news">
+          <div class="featured-news">
+            <picture class="news-image">
+              <source srcset="images/image-web-3-desktop.jpg" media="(min-width: 1200px)">
+              <img src="images/image-web-3-mobile.jpg" alt="News image">
+            </picture>
+            <div class="news-content">
+              <h2 class="news-title title">The Bright Future of Web 3.0?</h2>
+              <div class="container">
+                <p class="news-description desc">
+                  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+                </p>
+                <a href="#" class="cta-button button">Read more</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="new-articles">
+            <h2 class="section-title title-header">New</h2>
+
+            <div class="article-list flex flex-col">
+              <article class="news-item flex flex-col">
+                <h3 class="article-title title-two">Hydrogen VS Electric Cars</h3>
+                <p class="article-description desc">Will hydrogen-fueled cars ever catch up to EVs?</p>
+              </article>
+
+              <div class="divider"></div>
+
+              <article class="news-item flex flex-col">
+                <h3 class="article-title title-two">The Downsides of AI Artistry</h3>
+                <p class="article-description desc">What are the possible adverse effects of on-demand AI image generation?</p>
+              </article>
+
+              <div class="divider"></div>
+
+              <article class="news-item flex flex-col">
+                <h3 class="article-title title-two">Is VC Funding Drying Up?</h3>
+                <p class="article-description desc">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="top-rated-news flex">
+          <div class="ranked-news-item flex">
+            <img src="images/image-retro-pcs.jpg" alt="" class="news-thumbnail">
+            <div class="news-details flex flex-col">
+              <h3 class="rank title-rank">01</h3>
+              <div class="wrapper flex flex-col">
+                <h4 class="news-title title-three">Reviving Retro PCs</h4>
+                <p class="news-summary desc">What happens when old PCs are given modern upgrades?</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ranked-news-item flex">
+            <img src="images/image-top-laptops.jpg" alt="" class="news-thumbnail">
+            <div class="news-details flex flex-col">
+              <h3 class="rank title-rank">02</h3>
+              <div class="wrapper flex flex-col">
+                <h4 class="news-title title-three">Top 10 Laptops of 2022</h4>
+                <p class="news-summary desc">Our best picks for various needs and budgets.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ranked-news-item flex">
+            <img src="images/image-gaming-growth.jpg" alt="" class="news-thumbnail">
+            <div class="news-details flex flex-col">
+              <h3 class="rank title-rank">03</h3>
+              <div class="wrapper flex flex-col">
+                <h4 class="news-title title-three">The Growth of Gaming</h4>
+                <p class="news-summary desc">How the pandemic has sparked fresh opportunities.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/TaraDesk">Perahim Tara</a>.
+    </div>
+  </main>
+
+  <script src="./app/js/script.js"></script>
+</body>
+</html>

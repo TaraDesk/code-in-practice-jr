@@ -1,0 +1,144 @@
+@use 'variable' as vars;
+@import 'globals';
+@import 'header';
+
+// News Section
+#news-homepage {
+	margin-bottom: 2.25rem;
+}
+
+.recommended-news {
+	max-width: 100%;
+	padding: 0 0.25rem;
+}
+
+
+// Featured News
+.group-news {
+	margin-bottom: 4rem;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+
+	@media (min-width: 1200px) {
+		flex-direction: row;
+		gap: 1.875rem;
+	}
+}
+
+.featured-news {
+	@media (min-width: 1200px) {
+		flex: 75%;
+	}
+
+	.news-image img {
+		width: 100%;
+		margin-bottom: 1.5rem;
+
+		@media (min-width: 1200px) {
+			margin-bottom: 2.125rem;
+		}
+	}
+
+	.news-content {
+
+		@media (min-width: 1200px) {
+			display: flex;
+		}
+	}
+
+	.news-title {
+		margin-bottom: 1.125rem;
+
+		@media (min-width: 1200px) {
+			margin-bottom: 0;
+			margin-right: 3rem;
+			flex: 50%;
+		}
+	}
+
+	.container {
+		@media (min-width: 1200px) {
+			flex: 50%;
+		}
+	}
+
+	.cta-button {
+		margin-top: 1.5rem;
+
+		@media (min-width: 1200px) {
+			margin-top: 2.625rem;
+		}
+	}
+}
+
+.new-articles {
+	padding: 1.25rem 1.25rem 1.625rem 1.25rem;
+	background-color: vars.$veryDarkBlue;
+
+	@media (min-width: 1200px) {
+		flex: 34%;
+		padding: 1.5rem 1.5rem 2rem 1.5rem;
+	}
+
+	.section-title {
+		margin-bottom: 1.5rem;
+		color: vars.$softOrange;
+
+		@media (min-width: 1200px) {
+			margin-bottom: 1.125rem;
+		}
+	}
+
+	.article-list {
+		gap: 1.75rem;
+	}
+
+	.news-item {
+		gap: 0.375rem;
+	}
+}
+
+
+// Top Rated News
+.top-rated-news {
+	flex-direction: column;
+	gap: 1.75rem;
+
+	@media (min-width: 1200px) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.ranked-news-item {
+		align-items: stretch;
+		gap: 1.125rem;
+
+		@media (min-width: 1200px) {
+			align-items: center;
+			flex: 1;
+		}
+
+		.news-thumbnail {
+			width: 6.625rem;
+		}
+
+		.news-details {
+			gap: 0.75rem;
+		}
+
+	}
+}
+
+
+// Attribution Style
+.attribution {
+	color: vars.$veryDarkBlue;
+	text-align: center;
+	font-size: 0.688rem;
+	font-weight: 400;
+
+	a {
+		color: vars.$softOrange; 
+	}
+}

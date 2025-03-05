@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="app/styles.css">
+</head>
+<body>
+  <main>
+    <section class="notification-section">
+      <div class="header flex flex-jc-c flex-ai-c">
+        <h2 class="extra-bold">Notifications</h2>
+        <p class="count-unread">3</p>
+        <button class="mark-button">Mark all as read</button>
+      </div>
+
+      <ul class="notifications flex flex-col">
+        <li class="notification flex not-read">
+          <div class="avatar">
+            <img src="images/avatar-mark-webber.webp" alt="Avatar">
+          </div>
+          <div class="content">
+            <p class="message flex flex-ai-c"><a href="#" class="name extra-bold">Mark Webber</a> reacted to your recent post <a href="#" class="title-post">My first tournament today!</a></p>
+            <p class="arrived-time">1m ago</p>
+          </div>
+        </li>
+        <li class="notification flex not-read">
+          <div class="avatar">
+            <img src="images/avatar-angela-gray.webp" alt="Avatar">
+          </div>
+          <div class="content">
+            <p class="message"><a href="#" class="name extra-bold">Angela Gray</a> followed you</p>
+            <p class="arrived-time">5m ago</p>
+          </div>
+        </li>
+        <li class="notification flex not-read">
+          <div class="avatar">
+            <img src="images/avatar-jacob-thompson.webp" alt="Avatar">
+          </div>
+          <div class="content">
+            <p class="message"><a href="#" class="name extra-bold">Jacob Thompson</a> has joined your group <a href="#" class="group extra-bold">Chess Club</a></p>
+            <p class="arrived-time">1 day ago</p>
+          </div>
+        </li>
+        <li class="notification flex">
+          <div class="avatar">
+            <img src="images/avatar-rizky-hasanuddin.webp" alt="Avatar">
+          </div>
+          <div class="content">
+            <p class="message"><a href="#" class="name extra-bold">Rizky Hasanuddin</a> sent you a private message</p>
+            <p class="arrived-time">5 days ago</p>
+            <p class="details">
+              Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.
+            </p>
+          </div>
+        </li>
+        <li class="notification flex">
+          <div class="avatar">
+            <img src="images/avatar-kimberly-smith.webp" alt="Avatar">
+          </div>
+          <div class="content">
+            <p class="message"><a href="#" class="name extra-bold">Kimberly Smith</a> commented on your picture</p>
+            <p class="arrived-time">1 week ago</p>
+          </div>
+          <div class="post">
+            <img src="images/image-chess.webp" alt="Chess">
+          </div>
+        </li>
+        <li class="notification flex">
+          <div class="avatar">
+            <img src="images/avatar-nathan-peterson.webp" alt="Avatar">
+          </div>
+          <div class="content">
+            <p class="message"><a href="#" class="name extra-bold">Nathan Peterson</a> reacted to your recent post <a href="#" class="title-post">5 end-game strategies to increase your win rate</a></p>
+            <p class="arrived-time">2 weeks ago</p>
+          </div>
+        </li>
+        <li class="notification flex">
+          <div class="avatar">
+            <img src="images/avatar-anna-kim.webp" alt="Avatar">
+          </div>
+          <div class="content">
+            <p class="message"><a href="#" class="name extra-bold">Anna Kim</a> left the group <a href="#" class="group extra-bold">Chess Club</a></p>
+            <p class="arrived-time">2 weeks ago</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/TaraDesk">Perahim Tara</a>.
+    </div>
+  </main>
+
+  <script src="app/js/script.js"></script>
+</body>
+</html>

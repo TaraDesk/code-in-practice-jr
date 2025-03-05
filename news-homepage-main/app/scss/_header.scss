@@ -1,0 +1,92 @@
+.sidebar {
+	position: fixed;
+	top: 0;
+	right: 18.75rem;
+	z-index: 2;
+	width: 100vw;
+	height: 100vh;
+	transition: transform 0.3s ease-in-out;
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+
+	&.active {
+		transform: translateX(18.75rem);
+	}
+
+	&-menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 70vw;
+		height: 100%;
+		padding: 1.75rem 0.75rem 1.75rem 1.5rem;
+		gap: 5.5rem;
+		background-color: vars.$offWhite;
+	}
+
+	.close-btn {
+		align-self: self-end;
+		background-color: transparent;
+		border: none;
+	}
+
+	.header-links {
+		padding: 0;
+		gap: 1.313rem;
+		font-size: vars.$font-sm;
+
+		a {
+			color: vars.$veryDarkBlue;
+		}
+	}
+}
+
+.header {
+	margin-bottom: 1.75rem;
+
+	@media (min-width: 1200px) {
+		margin-bottom: 3.5rem;
+	}
+
+	.hamburger-menu {
+		border: none;
+		background: transparent;
+
+		img {
+			width: 3rem;
+			height: 1.25rem;
+		}
+
+		@media (min-width: 1200px) {
+			display: none;
+		}
+	}
+
+	.navbar-menu {
+		display: none;
+
+		@media (min-width: 1200px) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 2.25rem;
+			font-size: vars.$font-link;
+		}
+
+		.menu-link {
+			color: vars.$darkGrayishBlue;
+			transition: all ease-in-out 200ms;
+
+			&:hover {
+				color: vars.$veryDarkBlue;
+			}
+		}
+	}
+}

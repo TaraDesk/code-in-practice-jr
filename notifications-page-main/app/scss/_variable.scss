@@ -1,0 +1,31 @@
+// Primary Colors
+$red: hsl(1, 90%, 64%);
+$blue: hsl(219, 85%, 26%);
+
+// Neutral Colors
+$veryLightGrayishBlue: hsl(210, 60%, 98%);
+$lightGrayishBlue-one: hsl(211, 68%, 94%);
+$lightGrayishBlue-two: hsl(205, 33%, 90%);
+$grayishBlue: hsl(219, 14%, 63%);
+$darkGrayishBlue: hsl(219, 12%, 42%);
+$veryDarkBlue: hsl(224, 21%, 14%);
+$white: hsl(0, 0%, 100%);
+
+// Font Size
+$font-xs: 0.875rem;
+$font-sm: 1rem; // paragraph
+$font-md: 1.25rem; 
+$font-lg: 1.5rem;
+
+// Font Weight
+$font-medium: 500;
+$font-extraBold: 800;
+
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large":"64em", "xlarge": "87.5em");
+
+@mixin breakpoint-up($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
