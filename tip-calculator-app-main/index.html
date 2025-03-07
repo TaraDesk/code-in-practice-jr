@@ -17,45 +17,47 @@
 <body>
   <main>
     <header class="header">
-      <img class="header__logo" src="images/logo.svg" alt="Logo">
+      <h1>
+        <img class="header__logo" src="images/logo.svg" alt="Logo">
+      </h1>
     </header>
 
     <section class="container" id="tip-calc">
       <section class="calc flex flex-col">
         <div class="bill flex flex-col">
-          <h4 class="bill__label">Bill</h4>
+          <h3 class="bill__label">Bill</h3>
           <div class="wrapper">
             <input class="bill__input" type="number" placeholder="0">
           </div>
         </div>
 
         <div class="tips flex flex-col">
-          <h4 class="tips__label">Select Tip %</h4>
+          <h3 class="tips__label">Select Tip %</h3>
 
-          <div class="tips__buttons flex flex-ai-c">
-            <div class="tips__button" role="radio">
+          <div class="tips__buttons flex flex-ai-c" role="radiogroup" aria-label="Tip percentage">
+            <div class="tips__button" role="radio" aria-checked="false" tabindex="0">
               <input class="tips__button-radio" type="radio" name="tip" value="5"/>
-              <span class="tips__button-label flex flex-ai-c flex-jc-c">5%</span>
+              <label class="tips__button-label flex flex-ai-c flex-jc-c">5%</label>
             </div>
 
-            <div class="tips__button" role="radio">
+            <div class="tips__button" role="radio" aria-checked="false" tabindex="0">
               <input class="tips__button-radio" type="radio" name="tip" value="10"/>
-              <span class="tips__button-label flex flex-ai-c flex-jc-c">10%</span>
+              <label class="tips__button-label flex flex-ai-c flex-jc-c">10%</label>
             </div>
 
-            <div class="tips__button" role="radio">
+            <div class="tips__button" role="radio" aria-checked="false" tabindex="0">
               <input class="tips__button-radio" type="radio" name="tip" value="15"/>
-              <span class="tips__button-label flex flex-ai-c flex-jc-c">15%</span>
+              <label class="tips__button-label flex flex-ai-c flex-jc-c">15%</label>
             </div>
 
-            <div class="tips__button" role="radio">
+            <div class="tips__button" role="radio" aria-checked="false" tabindex="0">
               <input class="tips__button-radio" type="radio" name="tip" value="25"/>
-              <span class="tips__button-label flex flex-ai-c flex-jc-c">25%</span>
+              <label class="tips__button-label flex flex-ai-c flex-jc-c">25%</label>
             </div>
 
-            <div class="tips__button" role="radio">
+            <div class="tips__button" role="radio" aria-checked="false" tabindex="0">
               <input class="tips__button-radio" type="radio" name="tip" value="50"/>
-              <span class="tips__button-label flex flex-ai-c flex-jc-c">50%</span>
+              <label class="tips__button-label flex flex-ai-c flex-jc-c">50%</label>
             </div>
 
             <div class="tips__custom">
@@ -66,7 +68,7 @@
 
         <div class="peoples flex flex-col">
           <div class="container flex flex-jc-sb flex-ai-c">
-            <h4 class="peoples__label">Number of People</h4>
+            <h3 class="peoples__label">Number of People</h3>
             <p class="error-message">Can't be zero</p>
           </div>
           <div class="wrapper">

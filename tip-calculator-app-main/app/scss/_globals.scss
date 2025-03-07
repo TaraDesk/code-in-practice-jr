@@ -53,7 +53,7 @@ h2 {
 	}
 }
 
-h4 {
+h3, h4 {
 	font-size: vars.$font-sm;
 	color: vars.$darkGrayishCyan;
 }
@@ -89,13 +89,13 @@ h4 {
 .peoples__input {
 	width: 100%;
 	padding: 0.625rem 1.125rem;
-	border: 0.125rem solid vars.$grayishCyan;
+	border: 0.125rem solid transparent;
 	border-radius: vars.$rad-input;
 	font-family: Space Mono, sans-serif;
 	font-weight: bold;
 	font-size: vars.$font-md;
 	text-align: right;
-	background-color: vars.$lightGrayishCyan;
+	background-color: hsl(202.5, 50%, 96.86%);
 	color: vars.$veryDarkCyan;
 }
 
